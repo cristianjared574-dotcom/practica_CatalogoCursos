@@ -10,12 +10,18 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.practica_catalogocursos.Adaptador.catalogoCursosAdaptador
 import com.example.practica_catalogocursos.modelo.dataCarreras
+import com.example.practica_catalogocursos.modelo.dataCatalogoCursos
 import com.example.practica_catalogocursos.presentador.clsCarrerasPresentador
 
 class MainActivity : AppCompatActivity() {
     private lateinit var presenter:clsCarrerasPresentador
     private lateinit var spinnerCarrera:Spinner
+    private lateinit var recycleCursos: RecyclerView
+    private lateinit var adapterCatalogoCurso:catalogoCursosAdaptador
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,8 +34,13 @@ class MainActivity : AppCompatActivity() {
         }
 
         spinnerCarrera = findViewById(R.id.spnCarreras)
+        recycleCursos = findViewById(R.id.rvCatalogos)
         presenter = clsCarrerasPresentador(this)
 
+        recycleCursos.layoutManager = LinearLayoutManager(this)
+        adapterCatalogoCurso = catalogoCursosAdaptador(this, emptyList())
+        recycleCursos.adapter = adapterCatalogoCurso
+        presenter=clsCarrerasPresentador(this)
         configurarListeners()
         presenter.iniciar()
     }
@@ -47,6 +58,17 @@ class MainActivity : AppCompatActivity() {
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, carreras)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinnerCarrera.adapter = adapter
+    }
+
+    fun mostrarCursos(cursos: List<dataCatalogoCursos>){
+        adapterCatalogoCurso.actualizarLista(cursos)
+    }
+
+    fun seleccionarCurso(curso: dataCatalogoCursos){
+        presenter.seleccionarCurso(curso)
+    }
+    fun registrarCurso(curso: dataCatalogoCursos) {
+        presenter.registrarCurso(curso)
     }
 
     fun mostrarMensajeExito(id: Int, nombre: String){
