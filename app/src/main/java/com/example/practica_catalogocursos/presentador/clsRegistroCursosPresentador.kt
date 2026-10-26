@@ -10,25 +10,22 @@ class clsRegistroCursosPresentador(private val vista: RegistroAlCursoActivity) {
 
     private val modelo= clsRegistroCursosModelo()
 
-    fun RealizarRegistro(matricula: String, fecha: String, correo: String){
-
-        if(matricula.isEmpty()||fecha.isEmpty()||correo.isEmpty()){
-            vista.mostrarError("Por favor, llena todos los campos obligatorios")
-            return
-        }
-
+    //funcion para cuando se presione el boton registrarse en la pantalla
+    fun registrarCurso(idCurso: Int, matricula: String, fechaRegistro: String, correo: String){
         CoroutineScope(Dispatchers.Main).launch {
-            try{
-                val exito=modelo.registrarInscripcion(matricula, fecha, correo)
+            try {
+                val respuesta= modelo.registrarCurso(idCurso, matricula, fechaRegistro, correo)
 
-                if(exito){
-                    vista.mostrarMensajeExito("Inscripción registrada correctamente")
-                    vista.limpiarCampos()
+                if (!respuesta.mensaje.isNullOrEmpty()){
+                    vista.mostrarResultado(respuesta.mensaje)
+                }else if(!respuesta.error.isNullOrEmpty()){
+                    vista.mostrarError(respuesta.error)
                 }else{
-                    vista.mostrarError("No se pudo completar el registro")
+                    vista.mostrarResultado("Registro realizado con éxito")
                 }
-            }catch(e:Exception){
-                vista.mostrarError("Error: " + e.localizedMessage)
+
+            }catch (e: Exception){
+                vista.mostrarError("Error al conectar con el servidor: ${e.localizedMessage}")
             }
         }
     }
