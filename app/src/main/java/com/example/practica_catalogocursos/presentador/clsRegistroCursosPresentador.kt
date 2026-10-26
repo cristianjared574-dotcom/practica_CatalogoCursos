@@ -1,6 +1,6 @@
 package com.example.practica_catalogocursos.presentador
 
-import com.example.practica_catalogocursos.Vista.RegistroAlCursoActivity
+import com.example.practica_catalogocursos.vista.RegistroAlCursoActivity
 import com.example.practica_catalogocursos.modelo.clsRegistroCursosModelo
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
