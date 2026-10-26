@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    tools:context=".Vista.RegistroAlCursoActivity">
+
+
+    <TextView
+        android:id="@+id/txtTituloRegistro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txtTituloRegistro"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/txtTituloRegistroCurso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/txtTituloRegistroCurso"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTituloRegistro" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvRegistroAlCurso"
+        android:layout_width="0dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="8dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTituloRegistroCurso">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cardCursoRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imgCursoRegistro"
+                android:layout_width="94dp"
+                android:layout_height="0dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/txtRegistroCurso"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/txtRegistroCurso"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imgCursoRegistro"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/txtMatricula"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/txtMatricula"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvRegistroAlCurso" />
+
+    <EditText
+        android:id="@+id/txtEtiMatricula"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:hint="@string/txtEtiMatricula"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/txtMatricula"
+        app:layout_constraintStart_toStartOf="@+id/txtMatricula"
+        app:layout_constraintTop_toBottomOf="@+id/txtMatricula" />
+
+
+    <TextView
+        android:id="@+id/txtFecha"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/txtFecha"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/txtEtiMatricula"
+        app:layout_constraintStart_toStartOf="@+id/txtEtiMatricula"
+        app:layout_constraintTop_toBottomOf="@+id/txtEtiMatricula" />
+
+    <EditText
+        android:id="@+id/txtEtiFechaRegistro"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:hint="@string/txtEtiFechaRegistro"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/txtFecha"
+        app:layout_constraintStart_toStartOf="@+id/txtFecha"
+        app:layout_constraintTop_toBottomOf="@+id/txtFecha" />
+
+
+    <TextView
+        android:id="@+id/txtCorreo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/txtCorreo"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/txtEtiFechaRegistro"
+        app:layout_constraintStart_toStartOf="@+id/txtEtiFechaRegistro"
+        app:layout_constraintTop_toBottomOf="@+id/txtEtiFechaRegistro" />
+
+    <EditText
+        android:id="@+id/txtEtiCorreo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:hint="@string/txtEtiCorreo"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="@+id/txtCorreo"
+        app:layout_constraintStart_toStartOf="@+id/txtCorreo"
+        app:layout_constraintTop_toBottomOf="@+id/txtCorreo" />
+
+
+    <Button
+        android:id="@+id/btnConfirmarRegistro"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/btnConfirmarRegistro"
+        app:layout_constraintEnd_toEndOf="@+id/txtEtiCorreo"
+        app:layout_constraintStart_toStartOf="@+id/txtEtiCorreo"
+        app:layout_constraintTop_toBottomOf="@+id/txtEtiCorreo" />
+
+    <Button
+        android:id="@+id/btnCancelarRegistro"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/btnCancelarRegistro"
+        app:layout_constraintEnd_toEndOf="@+id/btnConfirmarRegistro"
+        app:layout_constraintStart_toStartOf="@+id/btnConfirmarRegistro"
+        app:layout_constraintTop_toBottomOf="@+id/btnConfirmarRegistro" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
