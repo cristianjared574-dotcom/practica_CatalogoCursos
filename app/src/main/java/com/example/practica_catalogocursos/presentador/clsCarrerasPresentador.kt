@@ -1,6 +1,6 @@
 package com.example.practica_catalogocursos.presentador
 
-import com.example.practica_catalogocursos.MainActivity
+import com.example.practica_catalogocursos.Vista.MainActivity
 import com.example.practica_catalogocursos.modelo.clsCarrerasModelo
 import com.example.practica_catalogocursos.modelo.clsCatalogoCursosModelo
 import com.example.practica_catalogocursos.modelo.dataCarreras
