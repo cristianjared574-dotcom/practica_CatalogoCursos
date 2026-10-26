@@ -15,11 +15,11 @@ class verRegistroAdaptador(private var listaRegistros: List<dataCatalogoCursos>)
     RecyclerView.Adapter<verRegistroAdaptador.RegistroViewHolder>() {
 
     class RegistroViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val imgCurso: ImageView = itemView.findViewById(R.id.imgCurso)
-        val txtNombreCurso: TextView = itemView.findViewById(R.id.txtNombreCurso)
-        val txtInscritos: TextView = itemView.findViewById(R.id.txtInscritos)
-        val txtTotalCupo: TextView = itemView.findViewById(R.id.txtTotalCupo)
-        val progressBarCurso: ProgressBar = itemView.findViewById(R.id.progressBarCurso)
+        val imgCurso: ImageView = itemView.findViewById(R.id.imgcurso)
+        val txtNombreCurso: TextView = itemView.findViewById(R.id.txtnombrecurso)
+        val txtInscritos: TextView = itemView.findViewById(R.id.txtinscritos)
+        val txtTotalCupo: TextView = itemView.findViewById(R.id.txtlimitealumnos)
+        val progressBarCurso: ProgressBar = itemView.findViewById(R.id.pb_inscritos)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RegistroViewHolder {
