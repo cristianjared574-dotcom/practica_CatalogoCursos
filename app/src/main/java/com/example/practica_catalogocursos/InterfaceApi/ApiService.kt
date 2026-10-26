@@ -2,7 +2,7 @@ package com.example.practica_catalogocursos.InterfaceApi
 
 import com.example.practica_catalogocursos.modelo.dataCarreras
 import com.example.practica_catalogocursos.modelo.dataCatalogoCursos
-import com.example.practica_catalogocursos.modelo.dataRespuestaRegistro
+//import com.example.practica_catalogocursos.modelo.dataRespuestaRegistro
 import kotlinx.serialization.json.JsonObject
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
@@ -17,7 +17,7 @@ interface ApiService {
     @GET("obtener_cursos.php")
     suspend fun obtenerCursos(@Query("id_carrera") carreraId: Int): List<dataCatalogoCursos>
 
-    @FormUrlEncoded//simula un formulario web
+    /*@FormUrlEncoded //simula un formulario web
     @POST("registro_al_curso.php")
     suspend fun registrarCurso(
         @Field("id_curso") idCurso: Int,
@@ -26,5 +26,5 @@ interface ApiService {
         @Field("correo_institucional") correo: String
 
         //porque no devuelve una lista
-    ): dataRespuestaRegistro
+    ): dataRespuestaRegistro*/
 }

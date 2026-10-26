@@ -11,7 +11,7 @@ class clsRegistroCursosPresentador(private val vista: RegistroAlCursoActivity) {
     private val modelo= clsRegistroCursosModelo()
 
     //funcion para cuando se presione el boton registrarse en la pantalla
-    fun registrarCurso(idCurso: Int, matricula: String, fechaRegistro: String, correo: String){
+    /*fun registrarCurso(idCurso: Int, matricula: String, fechaRegistro: String, correo: String){
         CoroutineScope(Dispatchers.Main).launch {
             try {
                 val respuesta= modelo.registrarCurso(idCurso, matricula, fechaRegistro, correo)
@@ -28,5 +28,5 @@ class clsRegistroCursosPresentador(private val vista: RegistroAlCursoActivity) {
                 vista.mostrarError("Error al conectar con el servidor: ${e.localizedMessage}")
             }
         }
-    }
+    }*/
 }

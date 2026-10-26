@@ -20,6 +20,7 @@ import com.example.practica_catalogocursos.R
 import com.example.practica_catalogocursos.modelo.dataCarreras
 import com.example.practica_catalogocursos.modelo.dataCatalogoCursos
 import com.example.practica_catalogocursos.presentador.clsCarrerasPresentador
+import com.example.practica_catalogocursos.vista.VerRegistroActivity
 
 class MainActivity : AppCompatActivity() {
     private lateinit var presenter:clsCarrerasPresentador
@@ -58,12 +59,12 @@ class MainActivity : AppCompatActivity() {
             override fun onNothingSelected(parent: AdapterView<*>?) {}
         }
 
-        /*btnVerRegistros.setOnClickListener(object : View.OnClickListener{
+        btnVerRegistros.setOnClickListener(object : View.OnClickListener{
             override fun onClick(v: View?){
-                val intent = Intent(this@MainActivity,VerRegistroActivity::class.java)
+                val intent = Intent(this@MainActivity, VerRegistroActivity::class.java)
                 startActivity(intent)
             }
-        })*/
+        })
     }
 
     fun mostrarCarrera(carreras: List<dataCarreras>){

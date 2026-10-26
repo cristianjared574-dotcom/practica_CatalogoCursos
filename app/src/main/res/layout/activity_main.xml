@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Vista.MainActivity">
 
     <Spinner
         android:id="@+id/spnCarreras"
@@ -37,7 +37,7 @@
         android:layout_width="381dp"
         android:layout_height="73dp"
         android:backgroundTint="#3345A9"
-        android:text="@string/btnVerRegistros"
+        android:text="@string/btnVerRegistro"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
