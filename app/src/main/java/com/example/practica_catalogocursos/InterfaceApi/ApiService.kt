@@ -17,7 +17,7 @@ interface ApiService {
     @GET("obtener_cursos.php")
     suspend fun obtenerCursos(@Query("id_carrera") carreraId: Int): List<dataCatalogoCursos>
 
-    @FormUrlEncoded//simula un formulario web
+    @FormUrlEncoded //simula un formulario web
     @POST("registro_al_curso.php")
     suspend fun registrarCurso(
         @Field("id_curso") idCurso: Int,
