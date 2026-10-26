@@ -1,15 +1,18 @@
 package com.example.practica_catalogocursos
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import android.widget.Button
 import android.widget.Spinner
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.practica_catalogocursos.Adaptador.catalogoCursosAdaptador
@@ -22,6 +25,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var spinnerCarrera:Spinner
     private lateinit var recycleCursos: RecyclerView
     private lateinit var adapterCatalogoCurso:catalogoCursosAdaptador
+    private lateinit var btnVerRegistros:Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,9 +39,9 @@ class MainActivity : AppCompatActivity() {
 
         spinnerCarrera = findViewById(R.id.spnCarreras)
         recycleCursos = findViewById(R.id.rvCatalogos)
-        presenter = clsCarrerasPresentador(this)
+        btnVerRegistros = findViewById(R.id.btnVerRegistros)
 
-        recycleCursos.layoutManager = LinearLayoutManager(this)
+        recycleCursos.layoutManager = GridLayoutManager(this,2)
         adapterCatalogoCurso = catalogoCursosAdaptador(this, emptyList())
         recycleCursos.adapter = adapterCatalogoCurso
         presenter=clsCarrerasPresentador(this)
@@ -52,6 +56,13 @@ class MainActivity : AppCompatActivity() {
 
             override fun onNothingSelected(parent: AdapterView<*>?) {}
         }
+
+        /*btnVerRegistros.setOnClickListener(object : View.OnClickListener{
+            override fun onClick(v: View?){
+                val intent = Intent(this@MainActivity,VerRegistroActivity::class.java)
+                startActivity(intent)
+            }
+        })*/
     }
 
     fun mostrarCarrera(carreras: List<dataCarreras>){

@@ -34,8 +34,8 @@ class catalogoCursosAdaptador(private val activity: MainActivity, private var li
     override fun onBindViewHolder(holder: CursosViewHolder , position: Int){
         val curso = listaCatalogoCursos[position]
         holder.tvNombreCurso.text = curso.nombreCurso
-        holder.tvSalon.text = "Salon: " + curso.salonCurso
-        val baseUrl = "http://192.168.100.53/catalogocurso/"
+        holder.tvSalon.text = "Salón: " + curso.salonCurso
+        val baseUrl = "http://192.168.100.53/catalogocursos/"
         val urlImagen = baseUrl + curso.rutaImagen
         Glide.with(holder.itemView.context)
             .load(urlImagen)
@@ -43,25 +43,17 @@ class catalogoCursosAdaptador(private val activity: MainActivity, private var li
             .error(android.R.drawable.stat_notify_error)
             .into(holder.imagenCurso)
 
-        // Aquí va el clic de Ver detalle
         holder.btnVerDetalle.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {
                 activity.seleccionarCurso(curso)
             }
         })
 
-        // Aquí va el clic de Registrarse
         holder.btnRegistrarse.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {
                 activity.registrarCurso(curso)
             }
         })
-
-        /*holder.itemView.setOnClickListener(object : View.OnClickListener {
-            override fun onClick(v: View?){
-                activity.seleccionarCurso(curso)
-            }
-        })*/
     }
 
     override fun getItemCount():Int{

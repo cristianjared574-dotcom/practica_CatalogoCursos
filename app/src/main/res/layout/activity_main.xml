@@ -9,33 +9,53 @@
 
     <Spinner
         android:id="@+id/spnCarreras"
-        android:layout_width="246dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="80dp"
+        android:layout_width="362dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="20dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/rvCatalogos"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.326"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/txtTitulo"
+        app:layout_constraintVertical_bias="0.884" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvCatalogos"
-        android:layout_width="388dp"
-        android:layout_height="442dp"
-        android:layout_marginStart="1dp"
+        android:layout_width="394dp"
+        android:layout_height="460dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintHorizontal_bias="0.41"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spnCarreras" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.472" />
 
     <Button
         android:id="@+id/btnVerRegistros"
-        android:layout_width="377dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="32dp"
-        android:text="Button"
+        android:layout_width="381dp"
+        android:layout_height="73dp"
+        android:backgroundTint="#3345A9"
+        android:text="@string/btnVerRegistros"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rvCatalogos" />
+
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="@string/txtTitulo"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">practica_CatalogoCursos</string>
+    <string name="txtTitulo">CATALOGO DE CURSOS</string>
+    //boton de ver registros
+    <string name="btnVerRegistros">VER REGISTROS</string>
     //botones del item_cursos
     <string name="btnVerDetalle">VER DETALLE</string>
     <string name="btnRegistrarse">REGISTRARSE</string>
