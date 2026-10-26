@@ -2,6 +2,7 @@ package com.example.practica_catalogocursos.InterfaceApi
 
 import com.example.practica_catalogocursos.modelo.dataCarreras
 import com.example.practica_catalogocursos.modelo.dataCatalogoCursos
+import com.example.practica_catalogocursos.modelo.dataRespuestaRegistro
 import kotlinx.serialization.json.JsonObject
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
@@ -23,5 +24,7 @@ interface ApiService {
         @Field("matricula") matricula: String,
         @Field("fecha_registro") fechaRegistro: String,
         @Field("correo_institucional") correo: String
-    ): dataRespuestaRegistro//porque no devuelve una lista
+
+        //porque no devuelve una lista
+    ): dataRespuestaRegistro
 }
