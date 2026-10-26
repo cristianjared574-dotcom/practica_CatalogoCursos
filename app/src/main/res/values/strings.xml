@@ -1,12 +1,13 @@
 <resources>
     <string name="app_name">practica_CatalogoCursos</string>
-    //botones del item_cursos
+    <!--botones del item_cursos-->
     <string name="btnVerDetalle">VER DETALLE</string>
     <string name="btnRegistrarse">REGISTRARSE</string>
 
-    //activity_registro_al_curso
+    <!--activity_registro_al_curso-->
     <string name="txtTituloRegistro">REGISTRO AL CURSO</string>
     <string name="txtTituloRegistroCurso">INSCRIPCIÓN:</string>
+    <string name="txtRegistroCurso">NOMBRE DEL CURSO:</string>
     <string name="txtMatricula">MATRICULA DEL ALUMNO:</string>
     <string name="txtEtiMatricula">Ingresa tu matrícula</string>
     <string name="txtFecha">FECHA DEL REGISTRO:</string>
@@ -15,8 +16,5 @@
     <string name="txtEtiCorreo">Ingresa tu correo institucional</string>
     <string name="btnConfirmarRegistro">CONFIRMAR INSCRIPCIÓN</string>
     <string name="btnCancelarRegistro">CANCELAR</string>
-
-
-
 
 </resources>
