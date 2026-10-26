@@ -1,4 +1,4 @@
-package com.example.practica_catalogocursos.Vista
+package com.example.practica_catalogocursos.vista
 
 import android.os.Bundle
 import android.widget.Button

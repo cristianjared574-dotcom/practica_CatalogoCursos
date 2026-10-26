@@ -10,5 +10,6 @@ import com.example.practica_catalogocursos.R
 class VerRegistroActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.ver_registro)
     }
 }

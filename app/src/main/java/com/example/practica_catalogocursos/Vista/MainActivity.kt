@@ -1,4 +1,4 @@
-package com.example.practica_catalogocursos.Vista
+package com.example.practica_catalogocursos.vista
 
 import android.content.Intent
 import android.os.Bundle
@@ -13,14 +13,13 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.practica_catalogocursos.Adaptador.catalogoCursosAdaptador
 import com.example.practica_catalogocursos.R
 import com.example.practica_catalogocursos.modelo.dataCarreras
 import com.example.practica_catalogocursos.modelo.dataCatalogoCursos
 import com.example.practica_catalogocursos.presentador.clsCarrerasPresentador
-import com.example.practica_catalogocursos.vista.VerRegistroActivity
+
 
 class MainActivity : AppCompatActivity() {
     private lateinit var presenter:clsCarrerasPresentador
@@ -61,7 +60,7 @@ class MainActivity : AppCompatActivity() {
 
         btnVerRegistros.setOnClickListener(object : View.OnClickListener{
             override fun onClick(v: View?){
-                val intent = Intent(this@MainActivity, VerRegistroActivity::class.java)
+                val intent = Intent(this@MainActivity,VerRegistroActivity::class.java)
                 startActivity(intent)
             }
         })
