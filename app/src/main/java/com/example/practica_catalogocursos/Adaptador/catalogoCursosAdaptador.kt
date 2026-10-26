@@ -3,14 +3,12 @@ package com.example.practica_catalogocursos.Adaptador
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.ViewParent
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.appcompat.view.menu.MenuView.ItemView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.practica_catalogocursos.MainActivity
+import com.example.practica_catalogocursos.Vista.MainActivity
 import com.example.practica_catalogocursos.R
 import com.example.practica_catalogocursos.modelo.dataCatalogoCursos
 
