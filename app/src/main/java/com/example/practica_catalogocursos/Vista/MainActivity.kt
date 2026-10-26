@@ -1,4 +1,4 @@
-package com.example.practica_catalogocursos
+package com.example.practica_catalogocursos.Vista
 
 import android.os.Bundle
 import android.view.View
@@ -13,6 +13,7 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.practica_catalogocursos.Adaptador.catalogoCursosAdaptador
+import com.example.practica_catalogocursos.R
 import com.example.practica_catalogocursos.modelo.dataCarreras
 import com.example.practica_catalogocursos.modelo.dataCatalogoCursos
 import com.example.practica_catalogocursos.presentador.clsCarrerasPresentador
