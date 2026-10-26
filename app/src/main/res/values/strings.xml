@@ -3,4 +3,20 @@
     //botones del item_cursos
     <string name="btnVerDetalle">VER DETALLE</string>
     <string name="btnRegistrarse">REGISTRARSE</string>
+
+    //activity_registro_al_curso
+    <string name="txtTituloRegistro">REGISTRO AL CURSO</string>
+    <string name="txtTituloRegistroCurso">INSCRIPCIÓN:</string>
+    <string name="txtMatricula">MATRICULA DEL ALUMNO:</string>
+    <string name="txtEtiMatricula">Ingresa tu matrícula</string>
+    <string name="txtFecha">FECHA DEL REGISTRO:</string>
+    <string name="txtEtiFechaRegistro">Selecciona la fecha</string>
+    <string name="txtCorreo">CORREO INSTITUCIONAL:</string>
+    <string name="txtEtiCorreo">Ingresa tu correo institucional</string>
+    <string name="btnConfirmarRegistro">CONFIRMAR INSCRIPCIÓN</string>
+    <string name="btnCancelarRegistro">CANCELAR</string>
+
+
+
+
 </resources>
