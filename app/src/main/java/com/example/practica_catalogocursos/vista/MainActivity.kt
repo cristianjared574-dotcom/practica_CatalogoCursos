@@ -98,5 +98,22 @@ class MainActivity : AppCompatActivity() {
     fun mostrarError(mensaje: String){
         Toast.makeText(this,mensaje, Toast.LENGTH_LONG).show()
     }
+    fun abrirDetalle(curso: dataCatalogoCursos) {
+        val intent = Intent(this, DetalleCursoActivity::class.java)
+
+        intent.putExtra("nombrecurso", curso.nombreCurso)
+        intent.putExtra("codigo_curso", curso.codigoCurso)
+        intent.putExtra("descripcion_curso", curso.descripcion)
+        intent.putExtra("salon_curso", curso.salonCurso)
+        intent.putExtra("espacio_curso", curso.edificioCurso)
+        intent.putExtra("totalh_curso", curso.totaHorasCurso.toString())
+        intent.putExtra("dias_curso", curso.diasAtencion)
+        intent.putExtra("IMAGEN_CURSO", curso.rutaImagen)
+
+        intent.putExtra("HORA_INICIO", curso.horaInicioCurso)
+        intent.putExtra("HORA_FIN", curso.horaFinCurso)
+
+        startActivity(intent)
+    }
 
 }

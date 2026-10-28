@@ -48,7 +48,7 @@ class clsCarrerasPresentador(private val vista: MainActivity) {
     }
 
     fun seleccionarCurso(curso: dataCatalogoCursos) {
-        //vista.abrirDetalle(curso)
+        vista.abrirDetalle(curso)
     }
 
     fun registrarCurso(curso: dataCatalogoCursos) {

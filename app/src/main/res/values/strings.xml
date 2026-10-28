@@ -5,7 +5,7 @@
     <string name="btnVerDetalle">VER DETALLE</string>
     <string name="btnRegistrarse">REGISTRARSE</string>
     <string name="btnVerRegistro">VER REGISTROS</string>
-    
+
     //item del registro al curso
     <string name="txtTituloRegistro">REGISTRO AL CURSO</string>
     <string name="txtTituloRegistroCurso">INSCRIPCIÓN:</string>
@@ -18,4 +18,18 @@
     <string name="txtEtiCorreo">Ingresa tu correo institucional</string>
     <string name="btnConfirmarRegistro">CONFIRMAR INSCRIPCIÓN</string>
     <string name="btnCancelarRegistro">CANCELAR</string>
+
+    // detalle curso activity
+
+
+    <string name="btnBack">BACK</string>
+
+   //detalle curso
+    <string name="txtDetalleDescripcion">DESCRIPCIÓN:</string>
+    <string name="txtDetalleEspacio">ESPACIO:</string>
+    <string name="txtDetalleTotalh">TOTAL HORAS:</string>
+    <string name="txtDetalleDias">DÍAS DE ATENCIÓN:</string>
+    <string name="txtDetalleHorario">HORARIO:</string>
+
+
 </resources>
