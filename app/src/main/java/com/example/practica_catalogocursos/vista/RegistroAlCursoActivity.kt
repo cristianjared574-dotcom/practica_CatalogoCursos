@@ -55,7 +55,7 @@ class RegistroAlCursoActivity : AppCompatActivity() {
 
         txtRegistroCurso.text=nombreCurso ?: "CursoSinNombre"
 
-        val baseUrl = "http://172.31.99.226/catalogocursos"
+        val baseUrl = "http://192.168.100.53/catalogocursos/"
         val urlImagen=baseUrl + rutaImagen
 
         Glide.with(this)
@@ -86,7 +86,7 @@ class RegistroAlCursoActivity : AppCompatActivity() {
 
     fun mostrarResultado(mensaje: String){
         Toast.makeText(this, mensaje, Toast.LENGTH_LONG).show()
-        finish()//cierra la pantalla al acompletarse
+
     }
 
     fun mostrarError(mensaje:String){
