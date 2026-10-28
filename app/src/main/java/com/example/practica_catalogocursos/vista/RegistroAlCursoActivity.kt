@@ -1,5 +1,6 @@
 package com.example.practica_catalogocursos.vista
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -10,12 +11,14 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.bumptech.glide.Glide
+import android.app.DatePickerDialog
+import java.util.Calendar
 import com.example.practica_catalogocursos.R
-import com.example.practica_catalogocursos.modelo.clsRegistroCursosModelo
 import com.example.practica_catalogocursos.presentador.clsRegistroCursosPresentador
 
 class RegistroAlCursoActivity : AppCompatActivity() {
-
+    private var idCursoActual: Int = 0
     private lateinit var txtEtiMatricula: EditText
     private lateinit var txtEtiFechaRegistro: EditText
     private lateinit var txtEtiCorreo: EditText
@@ -25,7 +28,6 @@ class RegistroAlCursoActivity : AppCompatActivity() {
     private lateinit var imgCursoRegistro: ImageView
     private lateinit var presenter: clsRegistroCursosPresentador
 
-    private var idCursoActual: Int=0
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -49,8 +51,18 @@ class RegistroAlCursoActivity : AppCompatActivity() {
         //prueba temporal
         idCursoActual=intent.getIntExtra("id_curso",0)
         val nombreCurso=intent.getStringExtra("nombre_curso")
+        val rutaImagen=intent.getStringExtra("ruta_imagen")
 
         txtRegistroCurso.text=nombreCurso ?: "CursoSinNombre"
+
+        val baseUrl = "http://192.168.100.53/catalogocursos/"
+        val urlImagen=baseUrl + rutaImagen
+
+        Glide.with(this)
+            .load(urlImagen)
+            .placeholder(android.R.drawable.ic_menu_gallery)
+            .error(android.R.drawable.stat_notify_error)
+            .into(imgCursoRegistro)
 
         presenter= clsRegistroCursosPresentador(this)
 
@@ -74,7 +86,7 @@ class RegistroAlCursoActivity : AppCompatActivity() {
 
     fun mostrarResultado(mensaje: String){
         Toast.makeText(this, mensaje, Toast.LENGTH_LONG).show()
-        finish()//cierra la pantalla al acompletarse
+
     }
 
     fun mostrarError(mensaje:String){

@@ -83,6 +83,14 @@ class MainActivity : AppCompatActivity() {
         presenter.registrarCurso(curso)
     }
 
+    fun abrirRegistro(curso:dataCatalogoCursos){
+        val intent=Intent(this, RegistroAlCursoActivity::class.java)
+        intent.putExtra("id_curso", curso.idcurso)
+        intent.putExtra("nombre_curso",curso.nombreCurso)
+        intent.putExtra("ruta_imagen", curso.rutaImagen)
+        startActivity(intent)
+    }
+
     fun mostrarMensajeExito(id: Int, nombre: String){
         Toast.makeText(this, "ID: " + id.toString()+ "-seleccionaste:"+nombre, Toast.LENGTH_SHORT).show()
     }

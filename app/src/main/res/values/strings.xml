@@ -10,7 +10,7 @@
     <string name="txtTituloRegistro">REGISTRO AL CURSO</string>
     <string name="txtTituloRegistroCurso">INSCRIPCIÓN:</string>
     <string name="txtRegistroCurso">NOMBRE DEL CURSO:</string>
-    <string name="txtMatricula">MATRICULA DEL ALUMNO:</string>
+    <string name="textoMatricula">MATRICULA DEL ALUMNO:</string>
     <string name="txtEtiMatricula">Ingresa tu matrícula</string>
     <string name="txtFecha">FECHA DEL REGISTRO:</string>
     <string name="txtEtiFechaRegistro">Selecciona la fecha</string>
@@ -22,7 +22,7 @@
     // detalle curso activity
 
 
-    <string name="btnBack">BACK</string>
+    <string name="btnBack">← BACK</string>
 
    //detalle curso
     <string name="txtDetalleDescripcion">DESCRIPCIÓN:</string>
@@ -30,6 +30,14 @@
     <string name="txtDetalleTotalh">TOTAL HORAS:</string>
     <string name="txtDetalleDias">DÍAS DE ATENCIÓN:</string>
     <string name="txtDetalleHorario">HORARIO:</string>
+
+    //item de detalle registro
+    <string name="txtEstadoRegistros">ESTADO DE INSCRIPCIONES</string>
+    <string name="btnVolverCatalogo">VOLVER AL CATALOGO</string>
+    <string name="txttotalregistros">Total:</string>
+    <string name="txtnombrecurso">Curso:</string>
+    <string name="txtinscritos">Inscritos:</string>
+    <string name="txtlimitealumnos">Limite Alumnos:</string>
 
 
 </resources>

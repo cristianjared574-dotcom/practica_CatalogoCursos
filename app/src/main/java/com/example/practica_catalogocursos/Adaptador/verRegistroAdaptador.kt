@@ -23,7 +23,6 @@ class verRegistroAdaptador(private var listaRegistros: List<dataCatalogoCursos>)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RegistroViewHolder {
-
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.item_registro, parent, false)
         return RegistroViewHolder(view)
@@ -31,15 +30,22 @@ class verRegistroAdaptador(private var listaRegistros: List<dataCatalogoCursos>)
 
     override fun onBindViewHolder(holder: RegistroViewHolder, position: Int) {
         val registro = listaRegistros[position]
-
+        val context = holder.itemView.context
         holder.txtNombreCurso.text = registro.nombreCurso
-        holder.txtInscritos.text = "Inscritos: "
-        holder.txtTotalCupo.text = "/ "
-        holder.progressBarCurso.progress = 50
-        val baseUrl = "http://172.31.99.213/catalogocursos/"
+
+        val labelInscritos = context.getString(R.string.txtinscritos)
+        val labelLimite = context.getString(R.string.txtlimitealumnos)
+
+        holder.txtInscritos.text = "$labelInscritos ${registro.totalRegistros}"
+        holder.txtTotalCupo.text = "$labelLimite ${registro.cupoTotalCurso}"
+        val cupoMax = registro.cupoTotalCurso.toIntOrNull() ?: 50
+        holder.progressBarCurso.max = cupoMax
+        holder.progressBarCurso.progress = registro.totalRegistros
+
+        val baseUrl = "http://192.168.100.53/catalogocursos/"
         val urlImagen = baseUrl + registro.rutaImagen
 
-        Glide.with(holder.itemView.context)
+        Glide.with(context)
             .load(urlImagen)
             .placeholder(android.R.drawable.ic_menu_gallery)
             .error(android.R.drawable.stat_notify_error)
@@ -49,8 +55,6 @@ class verRegistroAdaptador(private var listaRegistros: List<dataCatalogoCursos>)
     override fun getItemCount(): Int {
         return listaRegistros.size
     }
-
-
     fun actualizarLista(nuevaLista: List<dataCatalogoCursos>) {
         listaRegistros = nuevaLista
         notifyDataSetChanged()

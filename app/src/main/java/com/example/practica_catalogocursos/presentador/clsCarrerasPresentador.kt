@@ -52,12 +52,7 @@ class clsCarrerasPresentador(private val vista: MainActivity) {
     }
 
     fun registrarCurso(curso: dataCatalogoCursos) {
-        //vista.abrirRegistro(curso)
+        vista.abrirRegistro(curso)
     }
-
-    /*fun verRegistroDetalle(curso:data){
-
-    }*/
-
 
 }

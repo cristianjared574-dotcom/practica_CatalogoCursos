@@ -62,15 +62,15 @@ class DetalleCursoActivity : AppCompatActivity() {
 
 
         txtDetalleNomCurso.text = nomCurso
-        txtDetalleCodigo.text = codigocurso
+        txtDetalleCodigo.text = "Código: " + codigocurso
         txtDetalleDescripcionmas.text = descripcion
-        txtDetalleEspaciomas.text = "$salonCurso - $edificio"
-        txtDetalleTotalhMas.text = horastotales
+        txtDetalleEspaciomas.text = "Salón "+"$salonCurso" +", Edificio "+"$edificio"
+        txtDetalleTotalhMas.text = horastotales + " Horas"
         txtDetalleDiasmas.text = dias
         txtDetalleHorarioini.text=horaInicio
         txtDetalleHorariofin.text=horaFin
 
-        val baseUrl = "http://172.31.99.213/catalogocursos/"
+        val baseUrl = "http://192.168.100.53/catalogocursos/"
         if (!rutaImagen.isNullOrEmpty()) {
             Glide.with(this)
                 .load(baseUrl + rutaImagen)
