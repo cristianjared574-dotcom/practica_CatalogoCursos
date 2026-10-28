@@ -8,7 +8,6 @@
     tools:context=".vista.DetalleCursoActivity">
 
     <ScrollView
-
         android:layout_marginStart="1dp"
         android:layout_marginTop="1dp"
         android:layout_marginEnd="1dp"
@@ -26,7 +25,6 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="200dp">
@@ -37,7 +35,6 @@
                     android:layout_height="match_parent"
                     android:layout_marginBottom="2dp"
                     android:contentDescription="@string/btnBack"
-
                     android:scaleType="centerCrop"
                     tools:srcCompat="@tools:sample/avatars" />
 
@@ -49,7 +46,6 @@
                     android:backgroundTint="#03A9F4"
                     android:text="@string/btnBack" />
             </FrameLayout>
-
 
             <TextView
                 android:id="@+id/txtDetalleNomCurso"
@@ -89,10 +85,10 @@
                 android:id="@+id/txtDetalleEspacio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
+                android:layout_marginBottom="4dp"
+                android:text="@string/txtDetalleEspacio"
                 android:textSize="22sp"
-                android:textStyle="bold"
-                android:text="@string/txtDetalleEspacio" />
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/txtDetalleEspaciomas"
@@ -106,7 +102,7 @@
                 android:id="@+id/txtDetalleTotalh"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
+                android:layout_marginBottom="4dp"
                 android:text="@string/txtDetalleTotalh"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -123,7 +119,7 @@
                 android:id="@+id/txtDetalleDias"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
+                android:layout_marginBottom="4dp"
                 android:text="@string/txtDetalleDias"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -140,29 +136,59 @@
                 android:id="@+id/txtDetalleHorario"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
+                android:layout_marginBottom="8dp"
                 android:text="@string/txtDetalleHorario"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
 
-                <TextView
-                    android:id="@+id/txtDetalleHorarioini"
-                    android:layout_width="132dp"
+                <LinearLayout
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="TextView"
-                    android:textSize="14sp" />
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/txtDetalleHorariofin"
-                    android:layout_width="138dp"
-                    android:layout_height="match_parent"
-                    android:text="TextView"
-                    android:textSize="14sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Horario inicio"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtDetalleHorarioini"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="00:00:00"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Horario fin"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtDetalleHorariofin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="00:00:00"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
             </LinearLayout>
 
         </LinearLayout>
