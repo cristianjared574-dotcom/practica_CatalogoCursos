@@ -26,6 +26,9 @@
         <activity
             android:name=".vista.VerRegistroActivity"
             android:exported="false" />
+        
+        <activity android:name=".vista.RegistroAlCursoActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

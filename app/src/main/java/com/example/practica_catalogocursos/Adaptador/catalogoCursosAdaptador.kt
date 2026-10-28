@@ -3,7 +3,6 @@ package com.example.practica_catalogocursos.Adaptador
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.ViewParent
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
@@ -16,9 +15,9 @@ import com.example.practica_catalogocursos.modelo.dataCatalogoCursos
 class catalogoCursosAdaptador(private val activity: MainActivity, private var listaCatalogoCursos: List<dataCatalogoCursos>): RecyclerView.Adapter<catalogoCursosAdaptador.CursosViewHolder>() {
 
     class CursosViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
-        val tvNombreCurso: TextView = itemView.findViewById(R.id.txtNombreCurso)
+        val tvNombreCurso: TextView = itemView.findViewById(R.id.txtRegistroCurso)
         val tvSalon: TextView = itemView.findViewById(R.id.txtSalon)
-        val imagenCurso: ImageView = itemView.findViewById(R.id.imgCurso)
+        val imagenCurso: ImageView = itemView.findViewById(R.id.imgCursoRegistro)
 
         val btnVerDetalle: Button = itemView.findViewById(R.id.btnVerDetalle)
         val btnRegistrarse: Button = itemView.findViewById(R.id.btnRegistrarse)
@@ -34,7 +33,7 @@ class catalogoCursosAdaptador(private val activity: MainActivity, private var li
         val curso = listaCatalogoCursos[position]
         holder.tvNombreCurso.text = curso.nombreCurso
         holder.tvSalon.text = "Salon: " + curso.salonCurso
-        val baseUrl = "http://172.31.99.7/catalogocursos/"
+        val baseUrl = "http://172.31.99.226/catalogocursos/"
         val urlImagen = baseUrl + curso.rutaImagen
         Glide.with(holder.itemView.context)
             .load(urlImagen)
@@ -52,7 +51,7 @@ class catalogoCursosAdaptador(private val activity: MainActivity, private var li
         // Aquí va el clic de Registrarse
         holder.btnRegistrarse.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {
-                activity.registrarCurso(curso)
+                activity.abrirRegistro(curso)
             }
         })
 

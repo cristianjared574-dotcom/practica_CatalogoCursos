@@ -36,7 +36,7 @@ class verRegistroAdaptador(private var listaRegistros: List<dataCatalogoCursos>)
         holder.txtInscritos.text = "Inscritos: "
         holder.txtTotalCupo.text = "/ "
         holder.progressBarCurso.progress = 50
-        val baseUrl = "http://172.31.99.7/catalogocursos/"
+        val baseUrl = "http:// 172.31.99.226/catalogocursos/"
         val urlImagen = baseUrl + registro.rutaImagen
 
         Glide.with(holder.itemView.context)
