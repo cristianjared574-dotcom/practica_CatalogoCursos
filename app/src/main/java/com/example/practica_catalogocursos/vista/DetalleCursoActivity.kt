@@ -62,10 +62,10 @@ class DetalleCursoActivity : AppCompatActivity() {
 
 
         txtDetalleNomCurso.text = nomCurso
-        txtDetalleCodigo.text = codigocurso
+        txtDetalleCodigo.text = "Código: " + codigocurso
         txtDetalleDescripcionmas.text = descripcion
-        txtDetalleEspaciomas.text = "$salonCurso - $edificio"
-        txtDetalleTotalhMas.text = horastotales
+        txtDetalleEspaciomas.text = "Salón "+"$salonCurso" +", Edificio "+"$edificio"
+        txtDetalleTotalhMas.text = horastotales + " Horas"
         txtDetalleDiasmas.text = dias
         txtDetalleHorarioini.text=horaInicio
         txtDetalleHorariofin.text=horaFin

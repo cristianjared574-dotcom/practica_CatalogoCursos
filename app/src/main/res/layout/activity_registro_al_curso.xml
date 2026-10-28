@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F5F5F5"
+    android:background="#C3CDF4"
     android:fillViewport="true"
     tools:context=".vista.RegistroAlCursoActivity">
 
@@ -22,13 +22,6 @@
             android:gravity="center_vertical"
             android:orientation="horizontal"
             android:paddingBottom="16dp">
-
-            <ImageView
-                android:id="@+id/btnBack"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:contentDescription="Atrás"
-                android:src="@android:drawable/ic_menu_revert" />
 
             <TextView
                 android:id="@+id/txtTituloRegistro"
@@ -74,10 +67,11 @@
                     android:orientation="horizontal">
 
                     <!-- La imagen cambiará dinámicamente desde el código de Kotlin -->
+
                     <ImageView
                         android:id="@+id/imgCursoRegistro"
-                        android:layout_width="80dp"
-                        android:layout_height="60dp"
+                        android:layout_width="100dp"
+                        android:layout_height="80dp"
                         android:contentDescription="Imagen del curso"
                         android:scaleType="centerCrop"
                         tools:src="@tools:sample/avatars" />
@@ -88,7 +82,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="12dp"
                         android:layout_weight="1"
-                        android:text="PROGRAMACIÓN AVANZADA"
+                        android:text="TextView"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
                         android:textColor="#020202"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -139,7 +135,7 @@
             android:layout_marginBottom="16dp"
             android:background="@android:drawable/editbox_background"
             android:drawableEnd="@android:drawable/ic_menu_my_calendar"
-            android:hint="AAAA-MM-DD"
+            android:hint="Año - Mes - Dia"
             android:inputType="date"
             android:minHeight="48dp"
             android:padding="12dp"

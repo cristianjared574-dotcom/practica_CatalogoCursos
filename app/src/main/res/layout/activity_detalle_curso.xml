@@ -27,17 +27,19 @@
 
             <Button
                 android:id="@+id/btnBack"
-                android:layout_width="142dp"
+                android:layout_width="116dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
+                android:backgroundTint="#3F51B5"
                 android:text="@string/btnBack" />
 
             <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="200dp"
                 android:layout_marginBottom="20dp"
                 android:contentDescription="@string/btnBack"
+                android:scaleType="centerCrop"
                 tools:srcCompat="@tools:sample/avatars" />
 
             <TextView
@@ -45,16 +47,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
+                android:textAllCaps="true"
                 android:textSize="22sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/txtDetalleCodigo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"
-                android:textSize="15sp"
-                android:textStyle="normal"/>
+                android:textSize="16sp"
+                android:textStyle="normal" />
 
             <TextView
                 android:id="@+id/txtDetalleDescripcion"
@@ -70,7 +73,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:textSize="15sp"
+                android:textSize="16sp"
                 android:textStyle="normal" />
 
             <TextView
@@ -96,16 +99,16 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:text="@string/txtDetalleTotalh"
-                android:textSize="22sp"
-                android:textStyle="bold"/>
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/txtDetalleTotalhMas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:textSize="15sp"
-                android:textStyle="normal"/>
+                android:textSize="16sp"
+                android:textStyle="normal" />
 
             <TextView
                 android:id="@+id/txtDetalleDias"
@@ -113,8 +116,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:text="@string/txtDetalleDias"
-                android:textSize="22sp"
-                android:textStyle="bold"/>
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/txtDetalleDiasmas"
@@ -130,8 +133,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:text="@string/txtDetalleHorario"
-                android:textSize="22sp"
-                android:textStyle="bold"/>
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -142,13 +145,15 @@
                     android:id="@+id/txtDetalleHorarioini"
                     android:layout_width="132dp"
                     android:layout_height="wrap_content"
-                    android:text="TextView" />
+                    android:text="TextView"
+                    android:textSize="14sp" />
 
                 <TextView
                     android:id="@+id/txtDetalleHorariofin"
                     android:layout_width="138dp"
                     android:layout_height="match_parent"
-                    android:text="TextView" />
+                    android:text="TextView"
+                    android:textSize="14sp" />
             </LinearLayout>
 
         </LinearLayout>
