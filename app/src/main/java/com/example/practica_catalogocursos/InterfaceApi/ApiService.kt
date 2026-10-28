@@ -20,9 +20,9 @@ interface ApiService {
     suspend fun obtenerCursos(@Query("id_carrera") carreraId: Int): List<dataCatalogoCursos>
 
 
-    @POST("registro_al_curso.php")
-    suspend fun registrarCurso(
-        @Body datosRegistro: dataEnvioRegistro
+    @POST("registro_al_curso.php") //indica a que archivo del servidor se enviará la petición
+    suspend fun registrarCurso(//llama tu modelo para solicitar el registro
+        @Body datosRegistro: dataEnvioRegistro //envia los datos del formulario al cuerpo de la peticion en json
     ): dataRespuestaRegistro
 
     @GET("detalle_registro_cursos.php")
