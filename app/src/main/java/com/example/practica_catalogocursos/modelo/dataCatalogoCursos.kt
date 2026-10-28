@@ -17,5 +17,6 @@ data class dataCatalogoCursos(
     @SerialName("dias_atencion") val diasAtencion: String = "",
     @SerialName("hora_inicio") val horaInicioCurso: String = "",
     @SerialName("hora_fin") val horaFinCurso: String = "",
-    @SerialName("cupo_total") val cupoTotalCurso: String =""
+    @SerialName("cupo_total") val cupoTotalCurso: String ="",
+    @SerialName("total_registros") val totalRegistros: Int = 0
 )
