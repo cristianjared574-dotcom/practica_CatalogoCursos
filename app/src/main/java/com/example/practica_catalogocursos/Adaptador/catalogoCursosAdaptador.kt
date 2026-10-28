@@ -33,7 +33,7 @@ class catalogoCursosAdaptador(private val activity: MainActivity, private var li
         val curso = listaCatalogoCursos[position]
         holder.tvNombreCurso.text = curso.nombreCurso
         holder.tvSalon.text = "Salon: " + curso.salonCurso
-        val baseUrl = "http://172.31.99.213/catalogocursos/"
+        val baseUrl = "http://192.168.100.53/catalogocursos/"
         val urlImagen = baseUrl + curso.rutaImagen
         Glide.with(holder.itemView.context)
             .load(urlImagen)
@@ -55,11 +55,6 @@ class catalogoCursosAdaptador(private val activity: MainActivity, private var li
             }
         })
 
-        /*holder.itemView.setOnClickListener(object : View.OnClickListener {
-            override fun onClick(v: View?){
-                activity.seleccionarCurso(curso)
-            }
-        })*/
     }
 
     override fun getItemCount():Int{
