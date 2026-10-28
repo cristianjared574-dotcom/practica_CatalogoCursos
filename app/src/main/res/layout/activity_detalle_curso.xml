@@ -45,16 +45,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:textSize="20sp"
+                android:textSize="22sp"
                 android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/txtDetalleCodigo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:textSize="20sp"
-                android:textStyle="bold"/>
+                android:layout_marginBottom="20dp"
+                android:textSize="15sp"
+                android:textStyle="normal"/>
 
             <TextView
                 android:id="@+id/txtDetalleDescripcion"
@@ -62,7 +62,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="4dp"
                 android:text="@string/txtDetalleDescripcion"
-                android:textSize="20sp"
+                android:textSize="22sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -70,15 +70,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textSize="15sp"
+                android:textStyle="normal" />
 
             <TextView
                 android:id="@+id/txtDetalleEspacio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:textSize="20sp"
+                android:textSize="22sp"
                 android:textStyle="bold"
                 android:text="@string/txtDetalleEspacio" />
 
@@ -87,8 +87,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:textSize="20sp"
-                android:textStyle="bold"/>
+                android:textSize="15sp"
+                android:textStyle="normal"/>
 
             <TextView
                 android:id="@+id/txtDetalleTotalh"
@@ -96,7 +96,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:text="@string/txtDetalleTotalh"
-                android:textSize="20sp"
+                android:textSize="22sp"
                 android:textStyle="bold"/>
 
             <TextView
@@ -104,8 +104,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:textSize="20sp"
-                android:textStyle="bold"/>
+                android:textSize="15sp"
+                android:textStyle="normal"/>
 
             <TextView
                 android:id="@+id/txtDetalleDias"
@@ -113,7 +113,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:text="@string/txtDetalleDias"
-                android:textSize="20sp"
+                android:textSize="22sp"
                 android:textStyle="bold"/>
 
             <TextView
@@ -121,8 +121,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:textSize="20sp"
-                android:textStyle="bold"/>
+                android:textSize="15sp"
+                android:textStyle="normal"/>
 
             <TextView
                 android:id="@+id/txtDetalleHorario"
@@ -130,7 +130,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:text="@string/txtDetalleHorario"
-                android:textSize="20sp"
+                android:textSize="22sp"
                 android:textStyle="bold"/>
 
             <LinearLayout
