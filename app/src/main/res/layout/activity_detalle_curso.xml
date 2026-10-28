@@ -8,12 +8,13 @@
     tools:context=".vista.DetalleCursoActivity">
 
     <ScrollView
-        android:layout_width="409dp"
-        android:layout_height="729dp"
+
         android:layout_marginStart="1dp"
         android:layout_marginTop="1dp"
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,22 +26,30 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <Button
-                android:id="@+id/btnBack"
-                android:layout_width="116dp"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:backgroundTint="#3F51B5"
-                android:text="@string/btnBack" />
 
-            <ImageView
-                android:id="@+id/imageView"
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_marginBottom="20dp"
-                android:contentDescription="@string/btnBack"
-                android:scaleType="centerCrop"
-                tools:srcCompat="@tools:sample/avatars" />
+                android:layout_height="200dp">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="2dp"
+                    android:contentDescription="@string/btnBack"
+
+                    android:scaleType="centerCrop"
+                    tools:srcCompat="@tools:sample/avatars" />
+
+                <Button
+                    android:id="@+id/btnBack"
+                    android:layout_width="118dp"
+                    android:layout_height="47dp"
+                    android:layout_marginBottom="16dp"
+                    android:backgroundTint="#03A9F4"
+                    android:text="@string/btnBack" />
+            </FrameLayout>
+
 
             <TextView
                 android:id="@+id/txtDetalleNomCurso"
