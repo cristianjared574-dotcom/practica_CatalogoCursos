@@ -31,5 +31,12 @@
     <string name="txtDetalleDias">DÍAS DE ATENCIÓN:</string>
     <string name="txtDetalleHorario">HORARIO:</string>
 
+    //item de detalle registro
+    <string name="btnVolverCatalogo">VOLVER AL CATALOGO</string>
+    <string name="txttotalregistros">Total:</string>
+    <string name="txtnombrecurso">Curso:</string>
+    <string name="txtinscritos">Inscritos:</string>
+    <string name="txtlimitealumnos">Limite Alumnos:</string>
+
 
 </resources>
