@@ -22,7 +22,7 @@
     // detalle curso activity
 
 
-    <string name="btnBack">BACK</string>
+    <string name="btnBack">← BACK</string>
 
    //detalle curso
     <string name="txtDetalleDescripcion">DESCRIPCIÓN:</string>
@@ -32,6 +32,7 @@
     <string name="txtDetalleHorario">HORARIO:</string>
 
     //item de detalle registro
+    <string name="txtEstadoRegistros">ESTADO DE INSCRIPCIONES</string>
     <string name="btnVolverCatalogo">VOLVER AL CATALOGO</string>
     <string name="txttotalregistros">Total:</string>
     <string name="txtnombrecurso">Curso:</string>
