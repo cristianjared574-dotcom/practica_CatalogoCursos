@@ -55,9 +55,4 @@ class clsCarrerasPresentador(private val vista: MainActivity) {
         vista.abrirRegistro(curso)
     }
 
-    /*fun verRegistroDetalle(curso:data){
-
-    }*/
-
-
 }

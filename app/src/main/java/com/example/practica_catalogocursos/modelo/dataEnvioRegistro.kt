@@ -1,5 +1,8 @@
 package com.example.practica_catalogocursos.modelo
 
+import kotlinx.serialization.Serializable
+
+@Serializable
 data class dataEnvioRegistro(
     val id_curso: Int,
     val matricula: String,
