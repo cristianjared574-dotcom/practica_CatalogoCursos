@@ -1,5 +1,7 @@
 package com.example.practica_catalogocursos.InterfaceApi
 
+import com.example.practica_catalogocursos.modelo.dataBuscarRequest
+import com.example.practica_catalogocursos.modelo.dataBuscarResponse
 import com.example.practica_catalogocursos.modelo.dataCarreras
 import com.example.practica_catalogocursos.modelo.dataCatalogoCursos
 import com.example.practica_catalogocursos.modelo.dataEnvioRegistro
@@ -18,6 +20,10 @@ interface ApiService {
 
     @GET("obtener_cursos.php")
     suspend fun obtenerCursos(@Query("id_carrera") carreraId: Int): List<dataCatalogoCursos>
+
+    @POST("buscar_matricula.php")
+    suspend fun Buscar(@Body request: dataBuscarRequest): dataBuscarResponse
+
 
 
     @POST("registro_al_curso.php") //indica a que archivo del servidor se enviará la petición

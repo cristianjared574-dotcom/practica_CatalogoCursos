@@ -111,6 +111,7 @@
             android:layout_marginBottom="16dp"
             android:background="@android:drawable/editbox_background"
             android:hint="202113045"
+            android:imeOptions="actionDone"
             android:inputType="number"
             android:minHeight="48dp"
             android:padding="12dp"

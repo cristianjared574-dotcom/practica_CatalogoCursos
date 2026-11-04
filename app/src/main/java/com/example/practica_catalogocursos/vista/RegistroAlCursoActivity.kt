@@ -13,6 +13,9 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.bumptech.glide.Glide
 import android.app.DatePickerDialog
+import android.view.KeyEvent
+import android.view.inputmethod.EditorInfo
+import android.widget.DatePicker
 import java.util.Calendar
 import com.example.practica_catalogocursos.R
 import com.example.practica_catalogocursos.presentador.clsRegistroCursosPresentador
@@ -48,6 +51,10 @@ class RegistroAlCursoActivity : AppCompatActivity() {
         imgCursoRegistro= findViewById(R.id.imgCursoRegistro)
         txtRegistroCurso= findViewById(R.id.txtRegistroCurso)
 
+        txtEtiMatricula.setOnEditorActionListener(this::buscardatos)
+
+
+
         //prueba temporal
         idCursoActual=intent.getIntExtra("id_curso",0)
         val nombreCurso=intent.getStringExtra("nombre_curso")
@@ -82,14 +89,65 @@ class RegistroAlCursoActivity : AppCompatActivity() {
         btnCancelarRegistro.setOnClickListener{
             finish()
         }
+
+        txtEtiFechaRegistro.setOnClickListener {
+            val hoy = Calendar.getInstance()
+            val anio = hoy.get(Calendar.YEAR)
+            val mes = hoy.get(Calendar.MONTH)
+            val dia = hoy.get(Calendar.DAY_OF_MONTH)
+
+            val eventoFecha = object : DatePickerDialog.OnDateSetListener {
+                override fun onDateSet(
+                    vista: DatePicker, anioElegido: Int, mesElegido: Int, diaElegido: Int) {
+                    val mesCorrecto = mesElegido + 1
+                    var textoMes = mesCorrecto.toString()
+                    var textoDia = diaElegido.toString()
+
+                    if (mesCorrecto < 10) {
+                        textoMes = "0" + textoMes
+                    }
+
+                    if (diaElegido < 10) {
+                        textoDia = "0" + textoDia
+                    }
+
+                    val fecha = anioElegido.toString() + "-" + textoMes + "-" + textoDia
+                    txtEtiFechaRegistro.setText(fecha)
+                }
+            }
+            val calendario = DatePickerDialog(this, eventoFecha, anio, mes, dia)
+            calendario.show()
+        }
     }
 
     fun mostrarResultado(mensaje: String){
         Toast.makeText(this, mensaje, Toast.LENGTH_LONG).show()
-
+        limpiarComponentes()
     }
 
     fun mostrarError(mensaje:String){
         Toast.makeText(this, mensaje, Toast.LENGTH_SHORT).show()
     }
+
+    fun buscardatos(v: TextView?,i:Int,event: KeyEvent?): Boolean{
+        if(i== EditorInfo.IME_ACTION_DONE)
+        {
+            //Toast.makeText(this,"mensaje", Toast.LENGTH_SHORT).show()
+            presenter.realizarBusqueda(txtEtiMatricula.text.toString())
+        }
+        return false
+    }
+
+    fun mostrarCorreo(correo: String)
+    {
+        txtEtiCorreo.setText(correo)
+    }
+    fun limpiarComponentes(){
+        txtEtiMatricula.text.clear()
+        txtEtiFechaRegistro.text.clear()
+        txtEtiCorreo.text.clear()
+    }
+
+
+
 }
