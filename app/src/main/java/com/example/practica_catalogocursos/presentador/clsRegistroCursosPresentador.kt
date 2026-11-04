@@ -1,14 +1,17 @@
 package com.example.practica_catalogocursos.presentador
 
+import com.example.practica_catalogocursos.modelo.clsBuscarModelo
 import com.example.practica_catalogocursos.vista.RegistroAlCursoActivity
 import com.example.practica_catalogocursos.modelo.clsRegistroCursosModelo
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class clsRegistroCursosPresentador(private val vista: RegistroAlCursoActivity) {
 
     private val modelo= clsRegistroCursosModelo()
+    private val modeloBuscar= clsBuscarModelo()
 
     //funcion para cuando se presione el boton registrarse en la pantalla
     fun registrarCurso(idCurso: Int, matricula: String, fechaRegistro: String, correo: String){
@@ -28,5 +31,27 @@ class clsRegistroCursosPresentador(private val vista: RegistroAlCursoActivity) {
                 vista.mostrarError("Error al conectar con el servidor: ${e.localizedMessage}")
             }
         }
+    }
+
+    fun realizarBusqueda(matricula: String){
+        if(matricula.isEmpty()){
+            vista.mostrarError("Por favor, ingrese la matricula")
+            return
+        }
+        CoroutineScope(Dispatchers.Main).launch {
+            try{
+                val respuesta = withContext(Dispatchers.IO){
+                    modeloBuscar.BuscarAlumno(matricula)
+                }
+                if(respuesta.exito){
+                    vista.mostrarCorreo(respuesta.correoInstitucional)
+                }else{
+                    vista.mostrarError(respuesta.mensaje)
+                }
+            }catch (e: Exception){
+                vista.mostrarError("Error de conexion: ${e.localizedMessage ?: "Error desconocido"}")
+            }
+        }
+
     }
 }

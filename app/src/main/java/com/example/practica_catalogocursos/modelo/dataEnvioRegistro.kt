@@ -2,7 +2,7 @@ package com.example.practica_catalogocursos.modelo
 
 import kotlinx.serialization.Serializable
 
-@Serializable
+@Serializable //convertidor para enviarlos al servidor
 data class dataEnvioRegistro(
     val id_curso: Int,
     val matricula: String,
