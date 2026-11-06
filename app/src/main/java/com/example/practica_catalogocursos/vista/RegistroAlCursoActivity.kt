@@ -62,7 +62,7 @@ class RegistroAlCursoActivity : AppCompatActivity() {
 
         txtRegistroCurso.text=nombreCurso ?: "CursoSinNombre"
 
-        val baseUrl = "http://10.73.125.235/catalogocursos/"
+        val baseUrl = "https://christianjsh.somos4a.org/catalogocursos/"
         val urlImagen=baseUrl + rutaImagen
 
         Glide.with(this)
