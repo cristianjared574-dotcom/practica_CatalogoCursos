@@ -70,7 +70,7 @@ class DetalleCursoActivity : AppCompatActivity() {
         txtDetalleHorarioini.text=horaInicio
         txtDetalleHorariofin.text=horaFin
 
-        val baseUrl = "http://10.229.16.19/catalogocursos/"
+        val baseUrl = "https://christianjsh.somos4a.org/catalogocursos/"
         if (!rutaImagen.isNullOrEmpty()) {
             Glide.with(this)
                 .load(baseUrl + rutaImagen)

@@ -19,3 +19,13 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+
+#estas reglas ayudan que aunque se ofusque la app, las repuestas lleguen correctamente donde se almacenan
+
+# Conserva informacion de tipos genericos como List<curso>
+-keepattributes Signature
+
+# Conserva los metadatos de anotaciones como get y post
+-keepattributes *Annotation*
+
