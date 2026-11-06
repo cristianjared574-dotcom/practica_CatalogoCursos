@@ -33,7 +33,7 @@ class catalogoCursosAdaptador(private val activity: MainActivity, private var li
         val curso = listaCatalogoCursos[position]
         holder.tvNombreCurso.text = curso.nombreCurso
         holder.tvSalon.text = "Salon: " + curso.salonCurso
-        val baseUrl = "http://10.73.125.235/catalogocursos/"
+        val baseUrl = "http://10.229.16.19/catalogocursos/"
         val urlImagen = baseUrl + curso.rutaImagen
         Glide.with(holder.itemView.context)
             .load(urlImagen)

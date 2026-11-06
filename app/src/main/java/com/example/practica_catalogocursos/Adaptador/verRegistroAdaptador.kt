@@ -42,7 +42,7 @@ class verRegistroAdaptador(private var listaRegistros: List<dataCatalogoCursos>)
         holder.progressBarCurso.max = cupoMax
         holder.progressBarCurso.progress = registro.totalRegistros
 
-        val baseUrl = "http://10.73.125.235/catalogocursos/"
+        val baseUrl = "http://10.229.16.19/catalogocursos/"
         val urlImagen = baseUrl + registro.rutaImagen
 
         Glide.with(context)
