@@ -21,11 +21,7 @@ android {
 
     buildTypes {
         release {
-            //se pasa a true lo que activa ofuscamiento y optamiza con R8
-            isMinifyEnabled = true
-            /*Elimina recursos que no se utilizan ejemplo si una imagen no se utiliza, se elimina
-            del apk para reducir su tamaño*/
-            isShrinkResources = true
+            isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
